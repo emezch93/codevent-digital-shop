@@ -12,7 +12,7 @@
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content="CodeVent Shop — Digital Marketplace for Developers" />
   <meta property="og:description" content="Premium e-books, coding courses, and production-ready source codes. Start building. Start earning." />
-  <meta property="og:url"         content="https://emezch93.github.io/CodeVent-Digital/shop.html" />
+  <meta property="og:url"         content="https://emezch93.github.io/codevent-digital/shop.html" />
   <meta property="og:site_name"   content="CodeVent Digital" />
 
   <!-- ── Twitter Card ── -->
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "Store",
     "name": "CodeVent Shop",
-    "url": "https://emezch93.github.io/CodeVent-Digital/shop.html",
+    "url": "https://emezch93.github.io/codevent-digital/shop.html",
     "description": "Premium e-books, coding courses, and source codes for developers.",
     "currenciesAccepted": "NGN",
     "paymentAccepted": "Bank Transfer, Paystack"
@@ -350,6 +350,19 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 1.5rem;
+    }
+
+    /* When the grid has only a few cards (e.g. one course), center them
+       instead of left-aligning via auto-fill stretch */
+    .courses-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .courses-grid .shop-card {
+      width: 100%;
+      max-width: 360px;
     }
 
     .shop-card {
@@ -970,7 +983,7 @@
       <a href="#courses" class="nav-link" target="_self">Courses</a>
       <a href="#source"  class="nav-link" target="_self">Source Code</a>
       <a href="#contact" class="nav-link" target="_self">Contact</a>
-      <a href="https://emezch93.github.io/CodeVent-Digital/" class="nav-link nav-cta" target="_self">← Back to Platform</a>
+      <a href="index.html" class="nav-link nav-cta" target="_self">← Back to Platform</a>
     </nav>
 
     <div class="nav-actions">
@@ -1119,7 +1132,8 @@
       <p>Learn by building real projects with hands-on video courses delivered via WhatsApp.</p>
     </div>
 
-    <div class="shop-grid">
+    <!-- courses-grid centers cards; when there's only one it won't stretch edge-to-edge -->
+    <div class="shop-grid courses-grid">
 
       <article class="shop-card fade-up" aria-label="HTML CSS JavaScript Mastery course">
         <div class="card-icon-bg ci-1" aria-hidden="true">
@@ -1393,7 +1407,7 @@
     </div>
     <p>&copy; 2025 CodeVent Digital. All rights reserved.</p>
     <p style="margin-top:0.4rem;">
-      <a href="https://emezch93.github.io/CodeVent-Digital/" target="_blank">← Back to CodeVent Digital Platform</a>
+      <a href="index.html" target="_self">← Back to CodeVent Digital Platform</a>
     </p>
   </footer>
 
